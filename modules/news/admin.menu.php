@@ -90,6 +90,7 @@ if (!isset($site_mods['cms'])) {
 }
 
 if ($NV_IS_ADMIN_MODULE) {
+    $submenu['download'] = $lang_module['download'];
     $submenu['cat'] = $lang_module['categories'];
     $submenu['tags'] = $lang_module['tags'];
     $submenu['groups'] = $lang_module['block'];
@@ -103,6 +104,8 @@ if ($NV_IS_ADMIN_MODULE) {
             'voices' => $lang_module['voice_manager']
         ]
     ];
+
+    $allow_func[] = 'download';
 
     $allow_func[] = 'cat';
     $allow_func[] = 'change_cat';
